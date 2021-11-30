@@ -1,3 +1,5 @@
+using System;
+
 namespace Garage
 {
     public class Zero : Vehicle // Electric motorcycle
@@ -7,6 +9,10 @@ namespace Garage
         public void ChargeBattery()
         {
             // method definition omitted
+        }
+        public override void Drive()
+        {
+            Console.WriteLine("The black Zero rips by you. Yeeeeoww!");
         }
     }
 }
