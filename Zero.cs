@@ -1,18 +1,14 @@
 using System;
 
-namespace Garage
+namespace Garage.Vehicles
 {
-    public class Zero : Vehicle // Electric motorcycle
+    public class Zero : Vehicle, IElectricVehicle// Electric motorcycle
     {
-        public double BatteryKWh { get; set; }
+        public double CurrentChargePercentage { get; set; }
 
         public void ChargeBattery()
         {
-            // method definition omitted
-        }
-        public override void Drive()
-        {
-            Console.WriteLine("The black Zero rips by you. Yeeeeoww!");
+            // method body omitted
         }
     }
 }

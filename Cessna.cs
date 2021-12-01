@@ -1,18 +1,22 @@
 using System;
 
-namespace Garage
+namespace Garage.Vehicles
 {
-    public class Cessna : Vehicle // Propellor light aircraft
+    public class Cessna : Vehicle, IGasVehicle// Propellor light aircraft
     {
-        public double FuelCapacity { get; set; }
+        public double CurrentTankPercentage { get; set; }
 
         public void RefuelTank()
         {
-            // method definition omitted
+            CurrentTankPercentage = 100;
         }
         public override void Drive()
         {
-            Console.WriteLine($"The White Cessna zooms above you. ZOOOOOOM!");
+            Console.WriteLine($"The{MainColor} Cessna flies through the sky. ZOOOM!");
+        }
+        public override void Stop()
+        {
+            Console.WriteLine($"The{MainColor} Cessna comes to an abrupt stop.");
         }
     }
 }
